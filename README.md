@@ -250,9 +250,9 @@ DNS:        8.8.8.8
 This laboratory provides a foundation for future cybersecurity and penetration-testing exercises in a controlled environment.
 
 ## 🔗 Resources
-7-Zip: 7-Zip Official Website
-Oracle VirtualBox: VirtualBox Official Website
-Kali Linux: Kali Linux Official Website
+- [7-Zip Official Website](https://www.7-zip.org/)
+- [VirtualBox Official Website](https://www.virtualbox.org/)
+- [Kali Linux Official Website](https://www.kali.org/)
 ## 👤 Author
 HAMDA RAZA
 
