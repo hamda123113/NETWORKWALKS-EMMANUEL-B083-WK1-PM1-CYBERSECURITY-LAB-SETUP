@@ -1,4 +1,4 @@
-🔐 Cybersecurity Lab Setup
+**🔐 Cybersecurity Lab Setup**
 📌 Project Overview
 
 This project focuses on setting up a basic cybersecurity laboratory using Oracle VirtualBox and Kali Linux.
