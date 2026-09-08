@@ -136,7 +136,15 @@ The configuration was successfully activated and the IP address was verified usi
 
 The screenshot shows the Kali Linux terminal where the network configuration was performed using NetworkManager commands.
 
-### ⚙️ Step 8: VM snapshot
+### ⚙️ Step 8: Configure Hardware Virtualization
+
+Before starting the Kali Linux virtual machine, the VirtualBox system acceleration settings were checked.
+
+Under **System → Acceleration**, hardware virtualization was enabled with **Enable Nested Paging** selected.
+
+![VirtualBox Hardware Virtualization Settings](11-system-configuration-2.png)
+
+### ⚙️ Step 9: VM snapshot
 After completing all the above steps,a snapshot of the Kali Linux virtual machine was created to preserve the current working configuration.
 
 The snapshot can be used as a recovery point if any configuration changes or issues occur during future lab activities.
@@ -202,37 +210,29 @@ ip addr show eth0
 
 The network configuration problem helped me understand that Linux networking can be configured through both graphical interfaces and command-line utilities.
 
-### 🔐 Security & Ethical Use
-
-This laboratory is intended for educational and authorized cybersecurity practice.
-
-Any scanning, vulnerability assessment, penetration testing, or security experimentation performed using this environment should only target:
-
-Systems owned by me
-Virtual machines created for testing
-Systems for which explicit authorization has been provided
-
-Unauthorized security testing against third-party systems is not permitted.
-
-
-## ✅ Conclusion
-
-The Week 1 cybersecurity lab setup was completed by preparing the required virtualization tools, configuring Kali Linux in Oracle VirtualBox, creating the NatNetwork environment, and configuring the Kali Linux network settings.
-
-A graphical network-configuration limitation was encountered during the setup. This was resolved by using nmcli to manually configure the IP address, gateway, and DNS settings.
-
-The final Kali Linux network configuration used:
-
-IP Address: 10.0.0.2/24
-Gateway:    10.0.0.1
-DNS:        8.8.8.8
-
-This laboratory provides a foundation for future cybersecurity and penetration-testing exercises in a controlled environment.
-
 ## 🔗 Resources
 - [7-Zip Official Website](https://www.7-zip.org/)
 - [VirtualBox Official Website](https://www.virtualbox.org/)
 - [Kali Linux Official Website](https://www.kali.org/)
-## 👤 Author
-HAMDA RAZA
+  
+# 👤 Author
+
+**HAMDA RAZA**
+
+Remote Cybersecurity Intern
+
+## 📌 Project Information
+
+| Information | Details |
+|---|---|
+| **Program Name** | Cybersecurity at Networkwalks |
+| **Week** | 01 |
+| **Project** | Cybersecurity Lab Setup |
+| **Repository** | GitHub |
+
+---
+
+### 🔗 Connect
+
+**LinkedIn:** https://www.linkedin.com/in/hamda-rashid-67a157356/
 
