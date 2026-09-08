@@ -142,7 +142,7 @@ Before starting the Kali Linux virtual machine, the VirtualBox system accelerati
 
 Under **System → Acceleration**, hardware virtualization was enabled with **Enable Nested Paging** selected.
 
-![VirtualBox Hardware Virtualization Settings](11-system-configuration-2.png)
+![VirtualBox Hardware Virtualization Settings](11-kali-system-configuration-2.png)
 
 ### ⚙️ Step 9: VM snapshot
 After completing all the above steps,a snapshot of the Kali Linux virtual machine was created to preserve the current working configuration.
