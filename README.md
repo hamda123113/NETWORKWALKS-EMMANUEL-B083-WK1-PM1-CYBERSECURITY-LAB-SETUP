@@ -173,7 +173,6 @@ The required network parameters were manually configured:
 | **DNS** | `8.8.8.8` |
 The network connection was then restarted using:
 
-```bash
 **nmcli connection down**
 **nmcli connection up**
 
