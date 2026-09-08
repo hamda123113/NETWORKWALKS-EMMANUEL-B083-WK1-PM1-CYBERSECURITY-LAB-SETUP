@@ -13,15 +13,15 @@ The laboratory uses a dedicated virtual network so that additional virtual machi
 
 The main objectives of this project are:
 
-Install the required tools for the virtual lab.
-Set up Oracle VirtualBox.
-Download and configure Kali Linux.
-Create and configure a virtual network using VirtualBox.
-Configure the Kali Linux network connection.
-Assign the required IPv4 address, gateway, and DNS settings.
-Verify the network configuration.
-Document the setup process and troubleshooting experience.
-Prepare the environment for future cybersecurity exercises.
+- Install the required tools for the virtual lab.
+- Set up Oracle VirtualBox.
+- Download and configure Kali Linux.
+- Create and configure a virtual network using VirtualBox.
+- Configure the Kali Linux network connection.
+- Assign the required IPv4 address, gateway, and DNS settings.
+- Verify the network configuration.
+- Document the setup process and troubleshooting experience.
+- Prepare the environment for future cybersecurity exercises.
 
 ## 🏗️ Lab Environment
 
@@ -95,7 +95,7 @@ A virtual network named NatNetwork was configured in Oracle VirtualBox.
 
 This network provides the virtual networking environment required for the Kali Linux VM.
 
-The Kali Linux VM was then connected to this virtual network through its network adapter.This was done by opening kali linux setting,move to network on left side,set Network Type to NAT Network.
+The Kali Linux VM was then connected to this virtual network through its network adapter.This was done by opening the Kali Linux VM settings, selecting **Network** from the left-side menu, and setting the network attachment type to **NAT Network**.
 
 ![7-Zip Download](07-network-configuration.png)
 
@@ -107,7 +107,7 @@ The Kali Linux virtual machine was configured in VirtualBox.
 
 The VM configuration included the required system resources and network adapter settings.
 
-The VM was allocated RAM: 2048 MB
+The VM was allocated **2048 MB of RAM**.
 
 ![7-Zip Download](08-kali-vm-settings.png)
 
@@ -122,9 +122,11 @@ Because of this limitation, the network configuration was performed using the Ne
 
 The following network parameters were configured:
 
-IP Address: 10.0.0.2/24
-Gateway:    10.0.0.1
-DNS:        8.8.8.8
+| Setting | Value |
+|---|---|
+| **IP Address** | `10.0.0.2/24` |
+| **Gateway** | `10.0.0.1` |
+| **DNS** | `8.8.8.8` |
 
 The connection was then restarted using NetworkManager commands.
 
@@ -140,7 +142,7 @@ The screenshot shows the Kali Linux terminal where the network configuration was
 
 Before starting the Kali Linux virtual machine, the VirtualBox system acceleration settings were checked.
 
-Under **System → Acceleration**, hardware virtualization was enabled with **Enable Nested Paging** selected.
+Under **System → Acceleration**, the virtualization acceleration settings were checked and **Enable Nested Paging** was selected.
 
 ![VirtualBox Hardware Virtualization Settings](11-kali-system-configuration-2.png)
 
@@ -171,15 +173,15 @@ The required network parameters were manually configured:
 | **DNS** | `8.8.8.8` |
 The network connection was then restarted using:
 
-**nmcli connection down**
-**nmcli connection up**
+```bash
+nmcli connection down
+nmcli connection up
 
 Finally, the configuration was verified using:
 
 **ip addr show eth0**
 
 The connection was successfully activated and the required IP address was assigned.
-
 
 ## 📚 What I Learned
 
@@ -229,7 +231,17 @@ Remote Cybersecurity Intern
 | **Week** | 01 |
 | **Project** | Cybersecurity Lab Setup |
 
+## ✅ Conclusion
+
+The Week 1 cybersecurity lab setup was completed using Oracle VirtualBox and Kali Linux.
+
+The lab environment was configured with a dedicated NAT Network, and the Kali Linux VM was assigned the required IP address, gateway, and DNS settings.
+
+During the setup, the graphical network configuration option was unavailable, so the network was configured manually using `nmcli`. The connection was successfully activated and the IP configuration was verified.
+
+This environment provides a foundation for future cybersecurity learning and authorized security-testing activities.
+
 ### 🔗 Connect
 
-**LinkedIn:** https://www.linkedin.com/in/hamda-rashid-67a157356/
+**LinkedIn:** [Hamda Raza](https://www.linkedin.com/in/hamda-rashid-67a157356/)
 
