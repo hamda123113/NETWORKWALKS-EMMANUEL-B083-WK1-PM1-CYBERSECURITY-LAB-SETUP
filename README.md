@@ -174,8 +174,9 @@ The required network parameters were manually configured:
 The network connection was then restarted using:
 
 ```bash
-nmcli connection down
-nmcli connection up
+**nmcli connection down**
+**nmcli connection up**
+
 
 Finally, the configuration was verified using:
 
