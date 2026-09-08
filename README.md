@@ -215,7 +215,7 @@ The network configuration problem helped me understand that Linux networking can
 - [VirtualBox Official Website](https://www.virtualbox.org/)
 - [Kali Linux Official Website](https://www.kali.org/)
   
-# 👤 Author
+## 👤 Author
 
 **HAMDA RAZA**
 
@@ -228,9 +228,6 @@ Remote Cybersecurity Intern
 | **Program Name** | Cybersecurity at Networkwalks |
 | **Week** | 01 |
 | **Project** | Cybersecurity Lab Setup |
-| **Repository** | GitHub |
-
----
 
 ### 🔗 Connect
 
