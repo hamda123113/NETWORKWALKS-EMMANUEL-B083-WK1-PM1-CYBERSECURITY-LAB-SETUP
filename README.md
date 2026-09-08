@@ -3,7 +3,7 @@
 
 This project focuses on setting up a basic cybersecurity laboratory using Oracle VirtualBox and Kali Linux.
 
-The purpose of this lab is to create a controlled virtual environment for learning cybersecurity concepts, Linux networking, network configuration, and future security-testing activities.
+The purpose of the lab is to create a controlled environment where cybersecurity tools, network scanning, reconnaissance, vulnerability assessment, and other security-testing activities can be performed safely and repeatedly.
 
 The laboratory uses a dedicated virtual network so that additional virtual machines can be added later for authorized cybersecurity practice.
 
@@ -22,6 +22,7 @@ Assign the required IPv4 address, gateway, and DNS settings.
 Verify the network configuration.
 Document the setup process and troubleshooting experience.
 Prepare the environment for future cybersecurity exercises.
+
 ## 🏗️ Lab Environment
 
 The laboratory environment consists of the following components:
@@ -37,20 +38,20 @@ The laboratory environment consists of the following components:
 | DNS Server | 8.8.8.8 |
 | Network Configuration Tool | NetworkManager / `nmcli` |
 
-The Kali Linux virtual machine was configured inside VirtualBox and connected to the NatNetwork virtual network. The VM configuration screenshot also shows the allocated memory and virtual machine settings.
-
 ## 🛠️ Tools Used
 
 The following tools were used during the lab setup:
 
-7-Zip — used for working with compressed files.
-Oracle VirtualBox — used as the virtualization platform.
-Kali Linux — used as the cybersecurity-focused operating system.
-NetworkManager / nmcli — used to configure the Kali Linux network connection.
-🪜 Lab Setup Procedure
+| Tool | Purpose |
+|---|---|
+| 7-Zip | Used for working with compressed files. |
+| Oracle VirtualBox | Used as the virtualization platform. |
+| Kali Linux | Used as the cybersecurity-focused operating system. |
+| NetworkManager / `nmcli` | Used to configure the Kali Linux network connection. |
+## Lab Setup Procedure
 ### Step 1: Download 7-Zip
 
-7-Zip was accessed/downloaded as part of the preparation for working with compressed files required during the lab setup.
+7-Zip was downloaded as part of the preparation for working with compressed files required during the lab setup.
 
 ![7-Zip Download](01-7zip-download.png)
 
@@ -94,12 +95,8 @@ A virtual network named NatNetwork was configured in Oracle VirtualBox.
 
 This network provides the virtual networking environment required for the Kali Linux VM.
 
-The Kali Linux VM was then connected to this virtual network through its network adapter.
+The Kali Linux VM was then connected to this virtual network through its network adapter.This was done by opening kali linux setting,move to network on left side,set Network Type to NAT Network.
 
-Network Configuration
-Network Name: NatNetwork
-Network Type: NAT Network
-IPv4 Network: 10.0.0.0/24
 ![7-Zip Download](07-network-configuration.png)
 
 The screenshot shows the VirtualBox network configuration interface and the NatNetwork network.
@@ -110,11 +107,8 @@ The Kali Linux virtual machine was configured in VirtualBox.
 
 The VM configuration included the required system resources and network adapter settings.
 
-The VM was allocated:
+The VM was allocated RAM: 2048 MB
 
-RAM: 2048 MB
-
-The VM was configured to use the VirtualBox NatNetwork.
 ![7-Zip Download](08-kali-vm-settings.png)
 
 The screenshot shows the Kali Linux VM settings, including the system configuration and network adapter configuration.
@@ -136,33 +130,18 @@ The connection was then restarted using NetworkManager commands.
 
 The configuration was successfully activated and the IP address was verified using:
 
-ip addr show eth0
-
-This troubleshooting step is documented in the Word file, including the reason for using nmcli and the resulting IP configuration.
+**ip addr show eth0**
 
 ![7-Zip Download](09-kali-network-configuration.png)
 
 The screenshot shows the Kali Linux terminal where the network configuration was performed using NetworkManager commands.
 
-🔎 Network Verification
+### ⚙️ Step 8: VM snapshot
+After completing all the above steps,a snapshot of the Kali Linux virtual machine was created to preserve the current working configuration.
 
-After configuring the network connection, the assigned IP address was checked using:
+The snapshot can be used as a recovery point if any configuration changes or issues occur during future lab activities.
 
-ip addr show eth0
-
-The required IP address was:
-
-10.0.0.2/24
-
-The complete network configuration was:
-
-Setting	Value
-IPv4 Address	10.0.0.2/24
-Gateway	10.0.0.1
-DNS	8.8.8.8
-Interface	eth0
-
-The IP address was successfully verified after restarting the network connection.
+![7-Zip Download](12-kali-snapshot.png)
 
 ## 🐞 Problem Encountered & Solution
 ### Problem: Graphical Network Configuration Option Unavailable
@@ -177,18 +156,19 @@ To resolve the issue, the NetworkManager command-line utility (nmcli) was used.
 
 The required network parameters were manually configured:
 
-IP Address: 10.0.0.2/24
-Gateway:    10.0.0.1
-DNS:        8.8.8.8
-
+| Setting | Value |
+|---|---|
+| **IP Address** | `10.0.0.2/24` |
+| **Gateway** | `10.0.0.1` |
+| **DNS** | `8.8.8.8` |
 The network connection was then restarted using:
 
-nmcli connection down
-nmcli connection up
+**nmcli connection down**
+**nmcli connection up**
 
 Finally, the configuration was verified using:
 
-ip addr show eth0
+**ip addr show eth0**
 
 The connection was successfully activated and the required IP address was assigned.
 
